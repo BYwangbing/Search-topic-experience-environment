@@ -84,8 +84,8 @@ export default class TopicCards extends Component {
                     </div>
                 </div>
                 <div className="relateTopic">
-                    <Button type="ghost" size="large">确定</Button>&emsp;
-                    <Button type="ghost" size="large">确定</Button>&emsp;
+                    <Button type="ghost" size="large">话题</Button>&emsp;
+                    <Button type="ghost" size="large">话题</Button>&emsp;
                 </div>
                 <div className="relateVideo">
                     <Alert message="相关视频" type="success"/>
