@@ -1,0 +1,70 @@
+body {
+    font-size: .2rem!important;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.relateInfo {
+    margin: 20px 0;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    cursor: pointer;
+    /*margin: 2px 0;*/
+}
+
+.card:hover {
+    border-color: transparent;
+    -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*描述*/
+.cardDesc {
+    margin: 2px 1px;
+    verflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+}
+
+/*封面*/
+.cardCover {
+    width: 100%;
+}
+
+.cardCover img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.cardInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.cardFooter {
+    display: flex;
+    padding: 4px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardFooter span {
+    margin: 0 1px;
+}
