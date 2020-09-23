@@ -28,13 +28,20 @@ body {
 
 .card:hover {
     border-color: transparent;
-    -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 /*相关视频*/
 .site-card-wrapper{
+    width: 100%;
+    height: 100%;
     margin: 0 .9rem;
 }
+/*视频话题标签*/
+.relateTopic button:not(:first-child){
+    margin-left: 2rem;
+}
+/*相关视频标签*/
 /*描述*/
 .cardDesc {
     margin: 2px 1px;
@@ -68,6 +75,7 @@ body {
     width: 100%;
     color: #FFF;
     background-color: rgba(0, 0, 0, .4);
+    padding: 0.4rem;
 }
 
 .cardFooter {
