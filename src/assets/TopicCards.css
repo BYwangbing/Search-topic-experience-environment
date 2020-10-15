@@ -1,52 +1,175 @@
 body {
-    font-size: 1.4rem!important;
+    font-size: 1.4rem !important;
+}
+
+h1 {
+    text-shadow: #f3f3f3 1px 1px 0, #b2b2b2 1px 2px 0
+}
+
+h1, h2 {;
+    line-height: 1.5em;
+    overflow: visible;
+    margin-bottom: 0 !important;
+    padding: 2rem 0 !important;
+}
+
+h3 {
+    padding: 0 .6rem;
+    font-weight: 600 !important;
+    margin-bottom: 1rem !important;
+}
+
+/*相关视频标题*/
+h2 b:not(:first-child) {
+    margin-left: .8rem;
+}
+
+h2 b {
+    color: #F00;
+    margin-right: .8rem;
 }
 
 .container {
     margin: 0 auto;
 }
 
-.relateInfo {
-    margin: 20px 0;
-}
-.ant-col{
-    margin-bottom: .3rem;
-}
-/*相关视频*/
-.ant-alert-success{
-    margin: 1rem 0!important;
+.currentType {
+    display: inline-block;
+    font-size: 1.6rem;
+    margin: 0 1.5rem;
 }
 
+/*对应视频开始*/
+.relateInfo {
+    margin-top: 1.5rem;
+}
+
+.ant-row {
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.ant-col {
+    margin-bottom: .3rem;
+}
+
+/*下拉框*/
+.ant-select {
+    vertical-align: bottom;
+}
+
+.ant-select-selector {
+    height: 4rem !important;
+    padding: .3rem 1.1rem !important;
+}
+/*相关视频*/
+.cardTopic {
+    margin-bottom: .4rem;
+}
+
+.cardTopic span {
+
+    font-size: 1.4rem;
+}
+.cardTopic button{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cardTopic button b:first-child, .cardTopic button b:last-child{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.cardTopic button b {
+    margin: 0 .6rem;
+    font-size: 1.6rem;
+}
+.cardTopic .aa{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .card {
     position: relative;
     width: 100%;
-    height: 92%;
+    max-height: 37.5rem;
+    min-height: 37.5rem;
+    height: 37.5rem;
+    overflow: hidden;
+    margin-bottom: .5rem;
     border-radius: 5px;
     transition: all .5s;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #000;
 }
 
 .card:hover {
-    border-color: transparent;
-    -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .12), 0 6px 16px 0 rgba(0, 0, 0, .08), 0 9px 28px 8px rgba(0, 0, 0, .05);
 }
+
+.relatedCLick {
+    position: absolute;
+    top: .2rem;
+    right: .5rem;
+    color: #FFF;
+    padding: .3rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .9);
+}
+
 /*相关视频*/
-.site-card-wrapper{
+.site-card-wrapper {
     width: 100%;
     height: 100%;
-    margin: 0 .9rem;
 }
+
 /*视频话题标签*/
-.relateTopic button:not(:first-child){
+.relateTopic{
+    height: 37.3rem;
+    padding-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #1890ff;
+    overflow-y: auto;
+}
+
+.relateTopic button:not(:first-child) {
     margin-left: 2rem;
 }
+
+.topicTag {
+    display: flex;
+}
+
+.topicTag > span {
+    display: inline-block;
+    width: 100px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.topicTag span {
+    margin: .1px .1px;;
+    font-size: 1.5rem;
+    padding: .3rem .5rem;
+    border: none;
+}
+
+.cardTopicTag {
+    display: inline-block;
+    width: 75%;
+
+    vertical-align: top;
+}
+
 /*相关视频标签*/
 /*描述*/
 .cardDesc {
     margin: 2px 1px;
     padding-left: .2rem;
-    verflow: hidden;
+    overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -58,7 +181,6 @@ body {
 /*封面*/
 .cardCover {
     width: 100%;
-    height: 100%;
 }
 
 .cardCover img {
@@ -74,7 +196,7 @@ body {
     right: 0;
     width: 100%;
     color: #FFF;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .3);
     padding: 0.4rem;
 }
 
@@ -86,6 +208,131 @@ body {
 }
 
 .cardFooter span {
-    margin: 0 1px;
+    margin: 0 .3rem;
     font-size: 1.2rem;
+    vertical-align: text-top;
+}
+
+.postName {
+    display: inline-block;
+    max-width: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*数据为空*/
+.topicEmpty {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120%);
+}
+
+.versionFixed {
+    position: fixed;
+    top: 0;
+    right: 3rem;
+    padding: 1rem;
+    margin: 2rem 4rem;
+    background-color: #FFF;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .4);
+}
+
+.versionFixed p {
+    margin: 2px 0 !important;
+}
+
+.searchShow {
+    margin-right: 1.5rem;
+    display: inline-block !important;
+}
+
+.searchNone {
+    display: none !important;
+}
+
+.topicBtn {
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 5px;
+    background-color: #1890ff;
+}
+
+/*检索话题按钮下栏菜单*/
+.rel {
+    width: fit-content;
+    height: 37.3rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding: .1rem;
+    border-radius: 5px;
+    border: 1px solid #1890ff;
+}
+
+.retrieval {
+    display: inline-block;
+    margin: 2px 3px;
+    min-width: 14rem;
+    width: auto;
+}
+.retrieval button{
+    height: auto;
+}
+.retrieval h3{
+    font-size: 1.4rem;
+    color: #FFF;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0!important;
+    margin-bottom: 0!important;
+}
+.retrievalTopic {
+    height: 30.6rem;
+    overflow-y: auto;
+    border-radius: 2px;
+    /*box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .12), 0 6px 16px 0 rgba(0, 0, 0, .08), 0 9px 28px 8px rgba(0, 0, 0, .05);*/
+}
+
+ul.retrievalTopic {
+    padding: .5rem .4rem;
+    margin-bottom: .1rem;
+    background-color: #FFF;
+    border: 1px solid #1890ff;
+    border-top: none;
+}
+ul.retrievalTopic b{
+    display: inline-block;
+    width: 100%;
+    color: #0C253C;
+}
+.retrievalTopic li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    list-style-type: none;
+    line-height: 2.8rem;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 2rem;
+}
+
+.retrievalTopic li:hover {
+    color: #1890ff;
+}
+
+/*滚动条样式*/
+.relateTopic::-webkit-scrollbar, .rel::-webkit-scrollbar, .retrievalTopic::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+.relateTopic::-webkit-scrollbar-thumb, .rel::-webkit-scrollbar-thumb, .retrievalTopic::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    background-color: #E0E0E0;
 }
